@@ -21,9 +21,10 @@
       <table>
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>operadora</th>
-            <th>contato</th>
+            <th>Nome Do Motorista</th>
+            <th>Empresa</th>
+            <th>Nº Nota Fiscal</th>
+            <th>DATA ENTRADA</th>
             <th class="acao">Editar</th>
             <th class="acao">Excluir</th>
           </tr>
@@ -36,14 +37,18 @@
     <div class="modal-container">
       <div class="modal">
         <form>
-          <label for="m-nome">Nome</label>
+          <label for="m-nome">Nome Do Motorista</label>
           <input id="m-nome" type="text" required />
+
+          
+          <label for="m-empresa">Empresa</label>
+          <input id="m-e" type="text" required /> 
   
-          <label for="m-funcao">operadora</label>
+          <label for="m-funcao">Nº Nota Fiscal</label>
           <input id="m-funcao" type="text" required />
   
-          <label for="m-salario">contato</label>
-          <input id="m-salario" type="number" required />
+          <label for="m-salario">DATA ENTRADA</label>
+          <input id="m-salario" type="datetime-local" required />
           <button id="btnSalvar">Salvar</button>
         </form>
       </div>
