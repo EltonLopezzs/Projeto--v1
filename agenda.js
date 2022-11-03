@@ -4,6 +4,7 @@ const sNome = document.querySelector('#m-nome')
 const sEmpresa = document.querySelector('#m-empresa')
 const sFuncao = document.querySelector('#m-funcao')
 const sSalario = document.querySelector('#m-salario')
+const sSaida = document.querySelector('#m-saida')
 const btnSalvar = document.querySelector('#btnSalvar')
 
 let itens
@@ -23,12 +24,14 @@ function openModal(edit = false, index = 0) {
     sEmpresa.value = itens[index].empresa
     sFuncao.value = itens[index].funcao
     sSalario.value = itens[index].salario
+    sSaida.value = itens[index].saida
     id = index
   } else {
     sNome.value = ''
     sEmpresa.value = ''
     sFuncao.value = ''
     sSalario.value = ''
+    sSaida.value = ''
   }
   
 }
@@ -50,6 +53,7 @@ function insertItem(item, index) {
   tr.innerHTML = `
     <td>${item.nome}</td>
     <td>${item.empresa}</td>
+    <td>${item.saida}</td>
     <td>${item.funcao}</td>
     <td> ${item.salario}</td>
     <td class="acao">
@@ -64,7 +68,7 @@ function insertItem(item, index) {
 
 btnSalvar.onclick = e => {
   
-  if (sNome.value == '' || sEmpresa.value == '' || sFuncao.value == ''  || sSalario.value == '') {
+  if (sNome.value == '' || sEmpresa.value == '' || sFuncao.value == ''   || sSalario.value == '' || sSaida.value == '') {
     return
   }
 
@@ -75,8 +79,9 @@ btnSalvar.onclick = e => {
     itens[id].empresa = sNome.value
     itens[id].funcao = sFuncao.value
     itens[id].salario = sSalario.value
+    itens[id].saida = sSaida.value
   } else {
-    itens.push({'nome': sNome.value, 'empresa': sEmpresa.value, 'funcao': sFuncao.value, 'salario': sSalario.value})
+    itens.push({'nome': sNome.value,  'empresa': sEmpresa.value, 'funcao': sFuncao.value, 'salario': sSalario.value, 'saida': sSaida.value,})
   }
 
   setItensBD()

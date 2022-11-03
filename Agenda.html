@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <span>Agenda Telefonica</span>
+      <span>Sistema</span>
       <button onclick="openModal()" id="new">Incluir</i></button>
     </div>
 
@@ -23,8 +23,9 @@
           <tr>
             <th>Nome Do Motorista</th>
             <th>Empresa</th>
-            <th>Nº Nota Fiscal</th>
             <th>DATA ENTRADA</th>
+            <th>Nº Nota Fiscal</th>
+            <th>DATA SAIDA</th>
             <th class="acao">Editar</th>
             <th class="acao">Excluir</th>
           </tr>
@@ -49,6 +50,11 @@
   
           <label for="m-salario">DATA ENTRADA</label>
           <input id="m-salario" type="datetime-local" required />
+
+          <label for="m-saida">DATA SAIDA</label>
+          <input id="m-saida" type="datetime-local" required />
+
+
           <button id="btnSalvar">Salvar</button>
         </form>
       </div>
