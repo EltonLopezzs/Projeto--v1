@@ -11,9 +11,9 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(206, 26, 26, 0.1);
+  align-items: left;
+  justify-content: right;
+  background-color: rgb(214, 213, 216);
 }
 
 button {
@@ -21,14 +21,14 @@ button {
 }
 
 .container {
-  width: 90%;
-  height: 80%;
-  border-radius: 10px;
-  background: rgb(22, 170, 113);
+  width: 97%;
+  height: 98%;
+  border-radius: 20px;
+  background: rgb(8, 193, 240);
 }
 
 .header {
-  min-height: 70px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +46,7 @@ button {
   padding: 8px;
   border-radius: 5px;
   border: none;
-  color: rgba(17, 9, 9, 0.904);
+  color: rgb(0, 0, 0);
   background-color: rgb(154, 192, 18);
 }
 
@@ -75,11 +75,11 @@ table {
 }
 
 thead {
-  background-color: rgb(216, 27, 27);
+  background-color: rgb(25, 202, 149);
 }
 
 tr {
-  border-bottom: 1px solid rgb(238, 235, 235)!important;
+  border-bottom: 1px solid rgb(131, 98, 98)!important;
 }
 
 tbody tr td {

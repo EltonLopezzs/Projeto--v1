@@ -1,8 +1,11 @@
 const modal = document.querySelector('.modal-container')
 const tbody = document.querySelector('tbody')
 const sNome = document.querySelector('#m-nome')
+const sEmpresa = document.querySelector('#m-empresa')
 const sFuncao = document.querySelector('#m-funcao')
+const sIs = document.querySelector('#m-is')
 const sSalario = document.querySelector('#m-salario')
+const sSaida = document.querySelector('#m-saida')
 const btnSalvar = document.querySelector('#btnSalvar')
 
 let itens
@@ -19,13 +22,19 @@ function openModal(edit = false, index = 0) {
 
   if (edit) {
     sNome.value = itens[index].nome
+    sEmpresa.value = itens[index].empresa
     sFuncao.value = itens[index].funcao
+    sIs.value = itens[index].is
     sSalario.value = itens[index].salario
+    sSaida.value = itens[index].saida
     id = index
   } else {
     sNome.value = ''
+    sEmpresa.value = ''
     sFuncao.value = ''
+    sIs.value = ''
     sSalario.value = ''
+    sSaida.value = ''
   }
   
 }
@@ -46,6 +55,9 @@ function insertItem(item, index) {
 
   tr.innerHTML = `
     <td>${item.nome}</td>
+    <td>${item.empresa}</td>
+    <td>${item.saida}</td>
+    <td>${item.is}</td>
     <td>${item.funcao}</td>
     <td> ${item.salario}</td>
     <td class="acao">
@@ -60,7 +72,7 @@ function insertItem(item, index) {
 
 btnSalvar.onclick = e => {
   
-  if (sNome.value == '' || sFuncao.value == '' || sSalario.value == '') {
+  if (sNome.value == '' || sEmpresa.value == '' || sFuncao.value == '' || sIs.value == ''  || sSalario.value == '' || sSaida.value == '') {
     return
   }
 
@@ -68,10 +80,13 @@ btnSalvar.onclick = e => {
 
   if (id !== undefined) {
     itens[id].nome = sNome.value
+    itens[id].empresa = sNome.value
     itens[id].funcao = sFuncao.value
+    itens[id].is = sIs.value
     itens[id].salario = sSalario.value
+    itens[id].saida = sSaida.value
   } else {
-    itens.push({'nome': sNome.value, 'funcao': sFuncao.value, 'salario': sSalario.value})
+    itens.push({'nome': sNome.value,  'empresa': sEmpresa.value, 'is': sIs.value, 'funcao': sFuncao.value, 'salario': sSalario.value, 'saida': sSaida.value,})
   }
 
   setItensBD()
