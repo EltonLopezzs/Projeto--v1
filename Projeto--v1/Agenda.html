@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agenda</title>
+
+<link rel="stylesheet" href="agenda.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Sistema Portaria</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>NOME DO MOTORISTA</th>
+            <th>EMPRESA</th>
+            <th>DATA ENTRADA</th>
+            <th>iTEMS</th>
+            <th>Nº NOTA FISCAL</th>
+            <th>DATA SAIDA</th>
+            <th class="acao">EDITAR</th>
+            <th class="acao">EXCLUIR</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-nome">NOME DO MOTORISTA</label>
+          <input id="m-nome" type="text" required />
+
+          
+          <label for="m-empresa">EMPRESA</label>
+          <input id="m-empresa" type="text" required /> 
+  
+          <label for="m-funcao">Nº NOTA FISCAL</label>
+          <input id="m-funcao" type="text" required />
+
+          <label for="m-is">ITEMS</label>
+          <input id="m-is" type="text" required />
+
+          
+          <label for="m-salario">DATA ENTRADA</label>
+          <input id="m-salario" type="datetime-local" required />
+
+          <label for="m-saida">DATA SAIDA</label>
+          <input id="m-saida" type="datetime-local" required />
+
+
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+    <script src="agenda.js"></script>
+
+
+
+
+  </div>
+  
+
+</body>
+
+</html>
